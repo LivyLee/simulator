@@ -1,16 +1,14 @@
 
-extern void (*instructions[])(void);
+extern void (*instructions[])(int);
+
+extern unsigned char *eip;
 
 void init_cpu() {
+    
 }
 
 void cpu_cycle() {
 
-    instructions[0]();
-    instructions[1]();
-
-    instructions[2]();
-    instructions[2]();
-    instructions[2]();
+    instructions[*eip](*eip);
 
 }

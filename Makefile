@@ -8,6 +8,7 @@ all:
 	clang -O0 -c -Wall -g loader.c
 	clang -O0 -c -Wall -g memdump.c
 	clang -g stack.o regs.o memory.o memdump.o loader.o instr.o cpu.o main.o -o simulator
+	nasm -f macho code.asm
 
 analyze:
 	clang --analyze main.c

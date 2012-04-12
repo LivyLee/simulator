@@ -1,3 +1,3 @@
-int eax, ebx, ecx, edx, esi, edi, eip;
+int eax, ebx, ecx, edx, esi, edi, eflags;
 
-unsigned char *ebp, *esp;
+unsigned char *ebp, *esp, *eip;
