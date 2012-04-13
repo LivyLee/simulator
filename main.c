@@ -20,11 +20,11 @@ int main(int argc, char **argv) {
 
     init_stack();
 
-    init_cpu();
-
     loadcode(argv[1]);
 
-    for(tick=0;tick<12;tick++)
+    init_cpu();
+
+    for(tick=0;tick<14;tick++)
         cpu_cycle();
 
     memory_dump();

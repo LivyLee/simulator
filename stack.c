@@ -1,13 +1,12 @@
 #include "simulator.h"
 
-extern unsigned char *ebp;
-extern unsigned char *esp;
+extern unsigned int ebp;
+extern unsigned int esp;
 
-extern unsigned char *memory;
 
 void init_stack(){
 
-    ebp = memory + (MEMORYSIZE - 1);
-    esp = memory + (MEMORYSIZE - 1);
+    ebp = MEMORYSIZE - 1;
+    esp = MEMORYSIZE - 1;
     
 }

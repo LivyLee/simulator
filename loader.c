@@ -4,7 +4,9 @@
 #include <fcntl.h>
 #include <string.h>
 
-extern unsigned char *memory, *eip;
+#include "simulator.h"
+
+extern unsigned char *memory;
 
 void loadcode(char *file) {
 
@@ -22,17 +24,12 @@ void loadcode(char *file) {
 
     m = memory;
 
-    // EIP aponta pro inicio do codigo
-    eip = m;
-
     while((data = read(fd, &buf, 1))) {
 
         memcpy(m, &buf, 1);
         m++;
 
     }
-
-
 
     close(fd);
 

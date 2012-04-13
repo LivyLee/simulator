@@ -10,6 +10,8 @@ _start:
     mov edx, 40
     mov esi, 50
     mov edi, 60
+    mov ebp, 60
+    mov esp, 60
 
     push eax
     push ebx
@@ -17,3 +19,5 @@ _start:
     push edx
     push esi
     push edi
+    push ebp
+    push esp
