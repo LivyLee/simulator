@@ -9,8 +9,6 @@
 
 int main(int argc, char **argv) {
 
-    unsigned int tick;
-
     if(argc < 2) {
         printf("Especifique o arquivo com o codigo\n");
         exit(0);
@@ -24,8 +22,7 @@ int main(int argc, char **argv) {
 
     init_cpu();
 
-    for(tick=0;tick<14;tick++)
-        cpu_cycle();
+    while(cpu_cycle());
 
     memory_dump();
 

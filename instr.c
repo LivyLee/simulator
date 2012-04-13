@@ -138,6 +138,12 @@ static void push(int i) {
 
 }
 
+static void nop(int i){
+    printf("Executing an nop instruction\n");
+    eip++;
+
+}
+
 void (*instructions[])(int) = {
 [0x50]  =   push,
 [0x51]  =   push,
@@ -148,6 +154,7 @@ void (*instructions[])(int) = {
 [0x56]  =   push,
 [0x57]  =   push,
 [0x68]  =   push,
+[0x90]  =   nop,
 [0xb8]  =   mov,
 [0xbb]  =   mov,
 [0xb9]  =   mov,

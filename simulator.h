@@ -13,7 +13,7 @@ void init_stack();
 
 // CPU
 void init_cpu();
-void cpu_cycle();
+int cpu_cycle();
 
 // Loader
 void loadcode(char *);
