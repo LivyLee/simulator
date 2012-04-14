@@ -3,6 +3,7 @@
 
 #include "simulator.h"
 
+
 unsigned char *memory;
 
 void init_memory() {
